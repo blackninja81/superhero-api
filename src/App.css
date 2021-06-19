@@ -1,38 +1,70 @@
-.App {
-  text-align: center;
+body{
+    font-family: StintUltraCondensed-Regular;
+    background-color: rgb(12, 12, 12);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-blend-mode:soft-light;
+    background-size: cover;
+    /* background-image: url("https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fwww.ifoundmydoctor.com%2Fwp-content%2Fuploads%2F2019%2F10%2Fmarvel.jpg&f=1&nofb=1"); */
 }
+/* <-----SEARCHBOX DESIGN START-----> */
+.navigation{
+    background: rgba(0, 0, 0, 0);
+    border-color: white;
+    border-radius: 1rem;
+}
+.navigation input{
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+.navigation button{
+    margin-top: 1rem;
+    text-align: center;
+    margin-left: 40%;
+}
+.mainPage h1{
+    color: white;
+    width: 35%;
+    margin-left: 35%;
+    margin-top: 5%;
+    margin-bottom: 0;
+    text-align: center;
+    border-radius: 2rem;
+    padding: 1rem;
+}
+/* <-----SEARCHBOX DESIGN END-----> */
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* <-----CARD DESIGN START-----> */
+.superCard{
+    width: 20rem;
+    height: 21rem;
+    margin: 3rem;
+    margin-left: 0rem;
+    border-radius: 2rem;
+    text-align: center;
+    display: inline-block;
+    overflow: hidden;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.superCard img{
+    width: 20rem;
+    height: 17rem;
+    overflow: hidden;
+    border-radius: 2rem;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.card-name{
+    height: 6rem;
+    border-radius: 2rem;
+    padding-top: .5rem;
+    border-top-right-radius: 0;
+    border-top-left-radius: 0;
+    background-color: rgb(145, 134, 155);
+    transition: 1s;
 }
-
-.App-link {
-  color: #61dafb;
+.card-name h3{
+    padding: .5rem;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+/* <-----CARD DESIGN END-----> */
