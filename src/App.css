@@ -56,7 +56,7 @@ body{
 }
 .stats{
     display: inline-block;
-    background-color: rgb(145, 134, 155);
+    background-color: rgb(185, 185, 185);
     border-radius: 2rem;
     margin-left: 2%;
     overflow: hidden;
