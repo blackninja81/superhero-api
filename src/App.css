@@ -41,6 +41,7 @@ body{
 .superCard{
     height: 21rem;
     margin-top: 3rem;
+    margin-left: 8%;
     border-radius: 2rem;
     text-align: center;
     display: inline-block;
