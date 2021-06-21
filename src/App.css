@@ -22,7 +22,7 @@ body{
 .navigation button{
     margin-top: 1rem;
     text-align: center;
-    margin-left: 40%;
+    margin-left: 45%;
 }
 .mainPage h1{
     color: white;
@@ -37,14 +37,11 @@ body{
 /* <-----SEARCHBOX DESIGN END-----> */
 
 /* <-----CARD DESIGN START-----> */
-.superInfo{
-    /* display: flex; */
-}
 .stats{
     display: inline-block;
     background-color: rgb(145, 134, 155);
     border-radius: 2rem;
-    margin-left: 5rem;
+    margin-left: 10%;
     overflow: hidden;
     padding: 2rem;
     width: 24rem;
@@ -54,7 +51,7 @@ body{
     width: 20rem;
     height: 21rem;
     margin-top: 3rem;
-    margin-left: 7rem;
+    margin-left: 15%;
     border-radius: 2rem;
     text-align: center;
     display: inline-block;

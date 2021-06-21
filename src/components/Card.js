@@ -1,9 +1,8 @@
 import "../App.js"
-import { Link } from "react-dom";
 
 function Card({ name, image, id, appearance, biography, work }) {
     return (
-        <div className="superInfo">
+        <div className="superInfo container-fluid">
             <div className="superCard">
                 <div className="front">
                     <img src={image.url} alt="superhero image" />

@@ -38,7 +38,7 @@ function Homepage() {
     }
 
     return (
-        <div className="mainPage">
+        <div className="mainPage  container-fluid">
             <h1>SuperHero Search</h1>
             <div class="container container-fluid">
                 <br />
