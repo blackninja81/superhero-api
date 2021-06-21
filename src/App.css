@@ -37,11 +37,24 @@ body{
 /* <-----SEARCHBOX DESIGN END-----> */
 
 /* <-----CARD DESIGN START-----> */
+.superInfo{
+    /* display: flex; */
+}
+.stats{
+    display: inline-block;
+    background-color: rgb(145, 134, 155);
+    border-radius: 2rem;
+    overflow: hidden;
+    padding: 2rem;
+    width: 27rem;
+    height: 21rem;
+}
 .superCard{
     width: 20rem;
     height: 21rem;
-    margin: 3rem;
-    margin-left: 0rem;
+    margin-top: 3rem;
+    margin-right: 3rem;
+    margin-left: 7rem;
     border-radius: 2rem;
     text-align: center;
     display: inline-block;

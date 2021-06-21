@@ -3,35 +3,39 @@ import Searchbox from "../layouts/Search";
 import { useState, useEffect } from "react";
 import Card from "../components/Card";
 
-const API = "https://superheroapi.com/api.php/875892883204575/search/";
+const API = "https://superheroapi.com/api.php/875892883204575/";
 
 function Homepage() {
     const [hero, setHero] = useState([]);
+    const [error, setError] = useState(null);
     const [searchTerm, setSearchTerm] = useState([]);
+
+    const errorDiv = error
+        ? <div className="error">
+            <i class="material-icons error-icon">No results</i>
+            {error}
+        </div>
+        : '';
 
     const handleOnSubmit = (e) => {
         e.preventDefault();
+        setError(null);
 
-        fetch(API + searchTerm)
+        fetch(API + "search/" + searchTerm)
             .then((res) => res.json())
             .then((data) => {
-                console.log(data.results);
                 setHero(data.results);
-            });
-    };
+            })
+            .catch(
+                res => {
+                    setError(error);
+                }
+            )
+    }
 
     const handleOnChange = (e) => {
         setSearchTerm(e.target.value);
-    };
-
-    // useEffect(() => {
-    //     fetch(API)
-    //         .then((res) => res.json())
-    //         .then((data) => {
-    //             console.log(data.results);
-    //             setHero(data.results);
-    //         });
-    // }, []);
+    }
 
     return (
         <div className="mainPage">
@@ -39,29 +43,24 @@ function Homepage() {
             <div class="container container-fluid">
                 <br />
                 <br />
-                <div class="row justify-content-center">
-                    <div class="col-12 col-md-10 col-lg-8">
-                        <form class="card card-sm navigation" onSubmit={handleOnSubmit}>
-                            <div class="card-body row no-gutters align-items-center">
+                <div>
+                    <form class="card navigation" onSubmit={handleOnSubmit}>
+                        <div class="card-body">
+                            <div class="col">
+                                <input
+                                    type="search"
+                                    value={searchTerm}
+                                    onChange={handleOnChange}
+                                    class="form-control form-control-lg form-control-borderless"
+                                    placeholder="Search Superhero"
+                                />
+                                {errorDiv}
                                 <div class="col-auto">
-                                    <i class="fas fa-search h4 text-body"></i>
+                                    <button class="btn btn-lg btn-outline-light" type="submit">Search</button>
                                 </div>
-                                <div class="col">
-                                    <input
-                                        type="search"
-                                        value={searchTerm}
-                                        onChange={handleOnChange}
-                                        class="form-control form-control-lg form-control-borderless"
-                                        placeholder="Search Superhero"
-                                    />
-                                    <div class="col-auto">
-                                        <button class="btn btn-lg btn-outline-light" type="submit">Search</button>
-                                    </div>
-                                </div>
-
                             </div>
-                        </form>
-                    </div>
+                        </div>
+                    </form>
                 </div>
             </div>
             <div className="container">
