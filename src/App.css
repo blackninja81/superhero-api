@@ -41,7 +41,6 @@ body{
 .superCard{
     height: 21rem;
     margin-top: 3rem;
-    margin-left: 8%;
     border-radius: 2rem;
     text-align: center;
     display: inline-block;
@@ -61,7 +60,7 @@ body{
     margin-left: 2%;
     overflow: hidden;
     padding: 2rem;
-    width: 100%;
+    width: 70%;
     height: 21rem;
 }
 .card-name{
@@ -77,3 +76,18 @@ body{
     padding: .5rem;
 }
 /* <-----CARD DESIGN END-----> */
+
+@media (max-width: 576px) { 
+    .navigation{
+        margin-left: 5%;
+    }
+    .navigation button{
+        margin-left: 35%;
+    }
+    .stats{
+        width: 100%;
+    }
+    .superCard{
+        margin-left: 12%;
+    }
+ }
