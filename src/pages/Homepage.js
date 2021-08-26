@@ -67,7 +67,7 @@ function Homepage() {
                 <div className="row">
                     <div className="col">
                         {
-                            hero.map((info) => <Card {...info} />)
+                            hero?.length > 0 && hero.map((info) => <Card {...info} />)
                         }
                     </div>
                 </div>
